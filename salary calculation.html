@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sava Sala</title>
+	<link rel="stylesheet" href="js/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viweport" content="width=device-width, initial-scale=1">
+	
+	<script>
+	function fun2(){
+		let e=document.getElementById("da").value;
+		let f=document.getElementById("hra").value;
+		let g=document.getElementById("OA").value;
+		let h=document.getElementById("RA").value;
+		i = parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h);
+		document.getElementById("TA").value=i;
+		console.log(i);
+	}
+	
+	function fun1(){
+		let a=document.getElementById("BSc").value;
+		let b=document.getElementById("DOP").value;
+		let c=document.getElementById("lwp").value;
+		d = parseInt(a) - (parseInt(c)*(parseInt(a)/parseInt(b)));
+		document.getElementById("salary").value=d;
+		console.log(d);
+	}
+	
+	function fun3(){
+		let j=document.getElementById("pf").value;
+		let k=document.getElementById("tds").value;
+		let m=document.getElementById("PT").value;
+		let l=document.getElementById("LI").value;
+		n = parseInt(j) + parseInt(k) + parseInt(m) + parseInt(l);
+		document.getElementById("TD").value=n;
+		console.log(n);
+	}
+	
+	function fun4(){
+		o = parseInt(d) + parseInt(i) - parseInt(n);
+		document.getElementById("NS").value=o;
+		console.log(o);
+	}
+	</script>
+</head>
+
+<body>
+<div class="container">
+  <h2>Empolyee PayRoll</h2><hr/>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Employee Payroll information</div>
+    <div class="panel-body">
+	<form>
+		<div class="form-group col-md-4">
+			<label>Employee code</label>
+			<input class="form-control" type="number" id="Eco" name="Eco"/>
+		</div>
+		<div class="form-group col-md-8">
+			<label>Employee Name</label>
+			<input class="form-control" type="text" id="EName" name="EName"/>
+		</div>
+		
+		<div class="form-group col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Basic Salary</div>
+				<div class="panel-body">
+					<label>Basic Salary</label>
+					<input class="form-control" type="number" id="BSc" name="Bsc"/><br>
+					
+					<label>Day Of Payment</label>
+					<input class="form-control" type="number" id="DOP" name="DOP"/><br>
+				
+					<label>LWP</label>
+					<input class="form-control" type="number" id="lwp" name="lwp"/><br>
+					
+					<label>Salary</label>
+					<input class="form-control" type="number" id="salary" name="salary" onfocus="fun1()"/><br>
+				<br>
+				<br>
+				<br>
+				<br>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Salary Allounce</div>
+				<div class="panel-body">
+					<label>DA</label>
+					<input class="form-control" type="number" id="da" name="da"/><br>
+					
+					<label>HRA</label>
+					<input class="form-control" type="number" id="hra" name="hra"/><br>
+				
+					<label>Other Allounce</label>
+					<input class="form-control" type="number" id="OA" name="OA"/><br>
+					
+					<label>Reserve Amount</label>
+					<input class="form-control" type="number" id="RA" name="RA"/><br>
+					
+					<label>Total Allounce</label>
+					<input class="form-control" type="number" id="TA" name="TA" onfocus="fun2()"/><br>
+				
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Salary Deduction</div>
+				<div class="panel-body">
+					<label>PF</label>
+					<input class="form-control" type="number" id="pf" name="pf"/><br>
+					<label>TDS</label>
+					<input class="form-control" type="number" id="tds" name="tds"/><br>
+					<label>Professional Tax</label>
+					<input class="form-control" type="number" id="PT" name="PT"/><br>
+					<label>Loan Installments</label>
+					<input class="form-control" type="number" id="LI" name="LI"/><br>
+					<label>Total Deduction</label>
+					<input class="form-control" type="number" id="TD" name="TD" onfocus="fun3()"/><br>
+				
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Gross Salary</div>
+				<div class="panel-body">
+					<label>Net Salary</label>
+					<input class="form-control" type="number" id="NS" name="NS" onfocus="fun4()"/><br>
+					
+				</div>
+			</div>
+		</div>
+	</form>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>
